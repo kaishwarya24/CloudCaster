@@ -1,77 +1,104 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-.container {
-    width:600px;
-    margin: 100px auto;
-    padding: 40px;
-}
-.input{
-    padding: 2rem 0rem 2rem 0rem;
-    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
     justify-content: center;
-    background: rgb(224, 190, 190);
-    height: 150px;
-}
-.input input[type = "text"]{
-    height: 4rem;
-    width: 20rem;
-    background: #212121;
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 10px;
-    border: 2px solid black;
-    background-color: transparent;
-    border-radius: 3px;
-    margin-right: 4px;
+    align-items: center;
+    background: linear-gradient(to bottom right, #9ccee7, #c4d2ea);
+    
+  }
+  
 
-}
-
-.input input[type="submit"]{
-    height: 3rem;
-    width: 6rem;
-    background: #270aca;
-    font-weight: bold;
-    color: white;
-    font-size: 1rem;
-    margin-top: 20px;
+  .card {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(211, 157, 157, 0.8); /* White background with slight transparency */
+    color: #333; /* Dark gray text for better readability */
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    
+  }
+  
+  .search {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Add spacing below the search bar */
+  }
+  
+  .search input {
+    border: 1px solid #ddd; /* Light gray border */
+    outline: none;
+    background: #e4eff1; /* Lighter background for better contrast */
+    color: #333; /* Dark gray text for better readability */
+    padding: 10px 20px;
+    height: 40px;
+    border-radius: 5px;
+    flex: 1;
+    font-size: 16px;
+  }
+  
+  .search button {
     border: none;
-    border-radius: 4px;
-}
-.display{
-    text-align: center;
-    width: 520px;
-    color:#16a864;
-}
-
-.wrapper{
-    margin: 0;
-    background-color: rgb(172 , 189, 221);
-    height: 45vh;
-    margin: 50px auto;
-    border-radius: 2px;
-
-}
-.wrapper h2{
-    padding: 5px;
-    text-align: center;
-    background: #0548b5;
-    color: white;
-}
-.wrapper p{
-    margin: 20px 50px;
-    margin-left: 20px;
+    outline: none;
+    background: #3aa8e0; /* Blue background for the button */
+    color: #fff; /* White text for better contrast */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the button */
+  }
+  
+  .search button img {
+    width: 18px;
+  }
+  
+  .weather-icon {
+    width: 100px; /* Adjust icon size as needed */
+    margin-top: 20px; /* Adjust spacing as needed */
+  }
+  
+  .weather h1 {
+    font-size: 50px; /* Adjust heading size as needed */
+    font-weight: 500;
+  }
+  
+  .weather h2 {
+    font-size: 30px; /* Adjust subheading size as needed */
+    font-weight: 400;
+  }
+  
+  .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin-top: 20px; /* Adjust spacing as needed */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Add a thin border for separation */
+  }
+  
+  .col {
+    display: flex;
+    align-items: center;
     text-align: left;
-    color: #04214c;
-    font-size: 23px;
-}
-.wrapper h2 span{
-    font-size: 26px;
-    color: #9beefb;
-}
-.wrapper p span{
-    color: #5e0df4;
-    font-size: 25px;
-}
+  }
+  
+  .col img {
+    width: 30px; /* Adjust icon size as needed */
+    margin-right: 10px; /* Adjust spacing as needed */
+  }
+  
+  .humidity, .wind {
+    font-size: 18px; /* Adjust font size as needed */
+    margin-top: 0; /* Remove margin-top */
+  }
+  
