@@ -1,31 +1,76 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <section class = "main">
-            <section class="input">
-                <input type="text" placeholder="Enter Your City Name..." id="cityinput">
-                <input type="submit" value="Submit" id="add">
-                <button placeholder="submit" id="add"></button>
-            </section>
-            <section class="display">
-                <div class="wrapper">
-                    <h2 id="cityoutput"></h2>
-                    <p id="description"></p>
-                    <p id="temp"></p>
-                    <p id="wind"></p>
-                     
-                </div>
-
-            </section>
-        </section>
+  <div class="card">
+    <div class="search">
+      <input type="text" placeholder="Enter city name" spellcheck="false">
+      <button style="margin-left: 5px;"><img src="search.png" alt="Search icon"></button>
     </div>
-    
+    <div class="weather">
+      <img src="sunny.png" alt="" class="weather-icon">
+      <h1 class="temp"></h1>
+      <h2 class="city"></h2>
+      <div class="details">
+        <div class="col">
+          <img src="humidity.png" alt="Humidity icon">
+          <div>
+            <p class="humidity"></p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="col">
+          <img src="wind.png" alt="Wind icon">
+          <div>
+            <p class="wind"></p>
+            <p>Wind speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const apikey = "310ec015e153f90a8ea4fee1319e63a2";
+    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&";
+
+    const searchBox = document.querySelector(".search input");
+    const searchBtn = document.querySelector(".search button");
+    const weatherIcon = document.querySelector(".weather-icon")
+
+    async function checkWeather(city1) {
+      const response = await fetch(apiUrl + `q=${city1}&appid=${apikey}`);
+
+      var data = await response.json();
+      document.querySelector(".city").innerHTML = data.name;
+      document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
+      document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+      document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+
+      if(data.weather[0].main == "Clouds"){
+        weatherIcon.src = "cloudy.png";
+      }else if(data.weather[0].main == "Clear"){
+        weatherIcon.src = "sunny.png";
+      }else if(data.weather[0].main == "Rain"){
+        weatherIcon.src = "heavy-rain.png";
+      }
+      else if(data.weather[0].main == "Drizzle"){
+        weatherIcon.src = "drizzle.png";
+      }
+      else if(data.weather[0].main == "Mist"){
+        weatherIcon.src = "fog.png";
+      }
+    }
+
+    searchBtn.addEventListener("click", () => {
+      checkWeather(searchBox.value);
+    });
+  </script>
 </body>
 </html>
