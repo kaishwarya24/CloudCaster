@@ -18,27 +18,27 @@
   .card {
     width: 90%;
     max-width: 500px;
-    background: rgba(211, 157, 157, 0.8); /* White background with slight transparency */
-    color: #333; /* Dark gray text for better readability */
+    background: rgba(211, 157, 157, 0.8); 
+    color: #333;
     margin: 0 auto;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
     
   }
   
   .search {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px; /* Add spacing below the search bar */
+    margin-bottom: 30px; 
   }
   
   .search input {
-    border: 1px solid #ddd; /* Light gray border */
+    border: 1px solid #ddd; 
     outline: none;
-    background: #e4eff1; /* Lighter background for better contrast */
-    color: #333; /* Dark gray text for better readability */
+    background: #e4eff1; 
+    color: #333; 
     padding: 10px 20px;
     height: 40px;
     border-radius: 5px;
@@ -49,13 +49,13 @@
   .search button {
     border: none;
     outline: none;
-    background: #3aa8e0; /* Blue background for the button */
-    color: #fff; /* White text for better contrast */
+    background: #3aa8e0; 
+    color: #fff; 
     border-radius: 50%;
     width: 40px;
     height: 40px;
     cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the button */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
   }
   
   .search button img {
@@ -63,17 +63,17 @@
   }
   
   .weather-icon {
-    width: 100px; /* Adjust icon size as needed */
-    margin-top: 20px; /* Adjust spacing as needed */
+    width: 100px; 
+    margin-top: 20px; 
   }
   
   .weather h1 {
-    font-size: 50px; /* Adjust heading size as needed */
+    font-size: 50px; 
     font-weight: 500;
   }
   
   .weather h2 {
-    font-size: 30px; /* Adjust subheading size as needed */
+    font-size: 30px; 
     font-weight: 400;
   }
   
@@ -81,9 +81,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px; /* Adjust padding as needed */
-    margin-top: 20px; /* Adjust spacing as needed */
-    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Add a thin border for separation */
+    padding: 10px 20px; 
+    margin-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); 
   }
   
   .col {
@@ -93,12 +93,12 @@
   }
   
   .col img {
-    width: 30px; /* Adjust icon size as needed */
-    margin-right: 10px; /* Adjust spacing as needed */
+    width: 30px; 
+    margin-right: 10px; 
   }
   
   .humidity, .wind {
-    font-size: 18px; /* Adjust font size as needed */
-    margin-top: 0; /* Remove margin-top */
+    font-size: 18px; 
+    margin-top: 0; 
   }
   
